@@ -1,9 +1,15 @@
 class Cookbook
 	#replaced getter and setter methods
 	attr_accessor :title
+	attr_reader :recipes
 
 	def initialize(title)
 		@title = title
+		@recipes = []
+	end
+
+	def add_recipe(recipe)
+		@recipes << recipe
 	end
 end
 
